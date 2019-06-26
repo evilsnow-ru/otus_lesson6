@@ -28,7 +28,7 @@ type HwSubmitted struct {
 }
 
 func (e *HwSubmitted) LogEntry() string {
-	return fmt.Sprintf("submitted %d %s %s", e.Id, e.Code, e.Comment)
+	return fmt.Sprintf("submitted %d %s \"%s\"", e.Id, e.Code, e.Comment)
 }
 
 type OtusEvent interface {

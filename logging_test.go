@@ -38,7 +38,7 @@ func TestLogOtusEvent(t *testing.T) {
 	}
 
 	buffer.Reset()
-	expectedString = fmt.Sprintf("%s submitted %d %s %s", currentDate, msg2.Id, msg2.Code, msg2.Comment)
+	expectedString = fmt.Sprintf("%s submitted %d %s \"%s\"", currentDate, msg2.Id, msg2.Code, msg2.Comment)
 	testWriteEvent(t, expectedString, &buffer, msg2)
 }
 
